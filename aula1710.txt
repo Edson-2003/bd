@@ -1,0 +1,51 @@
+para entrar no banco
+  psql -U postgres
+
+arquivos usados pelo banco podem ser armazenados no /tmp para dispensar
+a mudança de permissões das pastas.
+
+
+o interessante é sempre modificar na pasta que estão armazenados os scripts e depois
+copiar para o /tmp com o cp.
+
+
+
+PRIMARY KEY - associado ao conceito de chave unica, ou seja, cada usuario tera um unico.
+Gera restrições de unicidade.
+
+NOT NULL - torna um argumento obrigatório, ou seja não há como inserir um registro sem
+os campos que estão com este atributo.
+
+
+
+ao inserir na mesma ordem de criuação das canpos não a nescessidade de informar a ordem
+de entrada
+
+-----------------------------------------------------------------------------------------
+
+RELACIONAMENTO DE DADOS
+ 
+
+ -CHAVE ESTRANGEIRA
+    cada estudante irá morar em uma cidade, criamos o campo cidade
+    para que a chave estrangeira funcione ela deve existir la na tabela de origem
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
