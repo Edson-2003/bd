@@ -1,0 +1,40 @@
+padrão de descrição diagramatica - projeto fisico do banco de dados - projeto relacional
+----------------------------------------------------------------------------------------
+
+estutura do SELECT
+
+SELECT coluna
+FROM tabela
+WHERE condição
+ORDER BY colunas ou criterio de ordenação
+
+exemplo
+
+SELECT * FROM produto;
+seleceiona todas as colunas na tabela produtos e retorna todas as linhas na ausencia do
+where, o * se refere as colunas, não os valores
+
+SELECT id, nome FROM produto;
+seleciona as colunas id e nome da tabela produto e exibe nesta ordem
+
+SELECT * FROM produto WHERE id = 508
+como temos o where sera retornado todas as colunas da tabela produto com o id 508
+
+
+O WHERE geralmente é combinado com os operadores AND OR E NOT
+
+exemplo
+ SELECT * FROM produto WHERE nome = 'pao' OR nome = 'tomate';
+ SELECT * FROM produto WHERE NOT (Nome = 'pao' OR nome = 'tomate');
+
+SELECT id, nome FROM produto ORDER BY nome ASC;
+
+onde precisamos relacionar tabelas usamos o operador join, e 
+o where para filtros, assim separando relacionamentos de filtros
+
+
+
+
+
+
+
