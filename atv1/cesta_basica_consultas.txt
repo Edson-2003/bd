@@ -1,0 +1,249 @@
+ id  |  nome  | quant_minima | unidade_medida 
+-----+--------+--------------+----------------
+ 355 | Arroz  |          3.0 | Kg
+ 487 | Banana |         10.0 | Kg
+ 786 | Carne  |          6.0 | Kg
+ 647 | Feijão |          4.5 | Kg
+ 203 | Leite  |         15.0 | litros
+ 174 | Pão    |          6.0 | Kg
+ 508 | Tomate |          9.0 | Kg
+(7 rows)
+
+ id |          nome          
+----+------------------------
+ 20 | Supermercado Preço Bom
+ 30 | Quitanda do Zé
+ 11 | Mercadinho da Esquina
+(3 rows)
+
+ id | ?column? |          nome          
+----+----------+------------------------
+ 20 |    20000 | Supermercado Preço Bom
+ 11 |    11000 | Mercadinho da Esquina
+ 30 |    30000 | Quitanda do Zé
+(3 rows)
+
+ id | mercado_id | produto_id | preco 
+----+------------+------------+-------
+ 21 |         11 |        174 |  6.00
+ 17 |         11 |        203 | 12.00
+  1 |         11 |        355 |  7.00
+ 12 |         11 |        487 |  5.00
+ 13 |         11 |        508 | 10.00
+  5 |         11 |        647 |  8.00
+  8 |         11 |        786 | 35.00
+ 16 |         20 |        174 |  3.00
+ 20 |         20 |        203 | 10.00
+ 15 |         20 |        355 |  5.00
+ 11 |         20 |        487 |  5.00
+ 18 |         20 |        508 |  6.00
+  9 |         20 |        647 |  8.00
+ 14 |         20 |        786 | 30.00
+  6 |         30 |        174 |  4.00
+  7 |         30 |        203 | 20.00
+ 10 |         30 |        355 |  2.00
+  2 |         30 |        487 |  8.00
+  3 |         30 |        508 | 13.00
+  4 |         30 |        647 | 10.00
+ 19 |         30 |        786 | 30.00
+(21 rows)
+
+ codigo |       nome       
+--------+------------------
+ X      | Cesta Almoço
+ Y      | Cesta Café Manhã
+(2 rows)
+
+ id | cesta_codigo | produto_id | quantidade 
+----+--------------+------------+------------
+  1 | Y            |        487 |        2.0
+  2 | X            |        355 |        2.0
+  3 | Y            |        203 |        5.0
+  4 | X            |        647 |        2.0
+  5 | Y            |        174 |        5.0
+  6 | X            |        508 |        1.0
+  7 | X            |        786 |        3.0
+(7 rows)
+
+---------------------------------------------
+
+
+  nome  | id  | unidade_medida 
+--------+-----+----------------
+ Carne  | 786 | Kg
+ Feijão | 647 | Kg
+ Tomate | 508 | Kg
+ Banana | 487 | Kg
+ Arroz  | 355 | Kg
+ Leite  | 203 | litros
+ Pão    | 174 | Kg
+(7 rows)
+
+  nome  | unidade_medida | id  
+--------+----------------+-----
+ Arroz  | Kg             | 355
+ Banana | Kg             | 487
+ Carne  | Kg             | 786
+ Feijão | Kg             | 647
+ Leite  | litros         | 203
+ Pão    | Kg             | 174
+ Tomate | Kg             | 508
+(7 rows)
+
+ codigo |       nome       | quantidade | unidade_medida |  nome  
+--------+------------------+------------+----------------+--------
+ X      | Cesta Almoço     |        2.0 | Kg             | Arroz
+ X      | Cesta Almoço     |        3.0 | Kg             | Carne
+ X      | Cesta Almoço     |        2.0 | Kg             | Feijão
+ X      | Cesta Almoço     |        1.0 | Kg             | Tomate
+ Y      | Cesta Café Manhã |        2.0 | Kg             | Banana
+ Y      | Cesta Café Manhã |        5.0 | litros         | Leite
+ Y      | Cesta Café Manhã |        5.0 | Kg             | Pão
+(7 rows)
+--------------------------------------------------------------------------
+ id  |  nome  | id |          nome          | preco 
+-----+--------+----+------------------------+-------
+ 355 | Arroz  | 11 | Mercadinho da Esquina  |  7.00
+ 355 | Arroz  | 30 | Quitanda do Zé         |  2.00
+ 355 | Arroz  | 20 | Supermercado Preço Bom |  5.00
+ 487 | Banana | 11 | Mercadinho da Esquina  |  5.00
+ 487 | Banana | 30 | Quitanda do Zé         |  8.00
+ 487 | Banana | 20 | Supermercado Preço Bom |  5.00
+ 786 | Carne  | 11 | Mercadinho da Esquina  | 35.00
+ 786 | Carne  | 30 | Quitanda do Zé         | 30.00
+ 786 | Carne  | 20 | Supermercado Preço Bom | 30.00
+ 647 | Feijão | 11 | Mercadinho da Esquina  |  8.00
+ 647 | Feijão | 30 | Quitanda do Zé         | 10.00
+ 647 | Feijão | 20 | Supermercado Preço Bom |  8.00
+ 203 | Leite  | 11 | Mercadinho da Esquina  | 12.00
+ 203 | Leite  | 30 | Quitanda do Zé         | 20.00
+ 203 | Leite  | 20 | Supermercado Preço Bom | 10.00
+ 174 | Pão    | 11 | Mercadinho da Esquina  |  6.00
+ 174 | Pão    | 30 | Quitanda do Zé         |  4.00
+ 174 | Pão    | 20 | Supermercado Preço Bom |  3.00
+ 508 | Tomate | 11 | Mercadinho da Esquina  | 10.00
+ 508 | Tomate | 30 | Quitanda do Zé         | 13.00
+ 508 | Tomate | 20 | Supermercado Preço Bom |  6.00
+(21 rows)
+-------------------------------------------------------------
+ id  |  nome  | id |          nome          | preco 
+-----+--------+----+------------------------+-------
+ 355 | Arroz  | 30 | Quitanda do Zé         |  2.00
+ 355 | Arroz  | 20 | Supermercado Preço Bom |  5.00
+ 355 | Arroz  | 11 | Mercadinho da Esquina  |  7.00
+ 487 | Banana | 20 | Supermercado Preço Bom |  5.00
+ 487 | Banana | 11 | Mercadinho da Esquina  |  5.00
+ 487 | Banana | 30 | Quitanda do Zé         |  8.00
+ 786 | Carne  | 20 | Supermercado Preço Bom | 30.00
+ 786 | Carne  | 30 | Quitanda do Zé         | 30.00
+ 786 | Carne  | 11 | Mercadinho da Esquina  | 35.00
+ 647 | Feijão | 11 | Mercadinho da Esquina  |  8.00
+ 647 | Feijão | 20 | Supermercado Preço Bom |  8.00
+ 647 | Feijão | 30 | Quitanda do Zé         | 10.00
+ 203 | Leite  | 20 | Supermercado Preço Bom | 10.00
+ 203 | Leite  | 11 | Mercadinho da Esquina  | 12.00
+ 203 | Leite  | 30 | Quitanda do Zé         | 20.00
+ 174 | Pão    | 20 | Supermercado Preço Bom |  3.00
+ 174 | Pão    | 30 | Quitanda do Zé         |  4.00
+ 174 | Pão    | 11 | Mercadinho da Esquina  |  6.00
+ 508 | Tomate | 20 | Supermercado Preço Bom |  6.00
+ 508 | Tomate | 11 | Mercadinho da Esquina  | 10.00
+ 508 | Tomate | 30 | Quitanda do Zé         | 13.00
+(21 rows)
+
+consulta 12 parei
+
+ id |          nome          | id  |  nome  | preco 
+----+------------------------+-----+--------+-------
+ 11 | Mercadinho da Esquina  | 355 | Arroz  |  7.00
+ 11 | Mercadinho da Esquina  | 487 | Banana |  5.00
+ 11 | Mercadinho da Esquina  | 786 | Carne  | 35.00
+ 11 | Mercadinho da Esquina  | 647 | Feijão |  8.00
+ 11 | Mercadinho da Esquina  | 203 | Leite  | 12.00
+ 11 | Mercadinho da Esquina  | 174 | Pão    |  6.00
+ 11 | Mercadinho da Esquina  | 508 | Tomate | 10.00
+ 30 | Quitanda do Zé         | 355 | Arroz  |  2.00
+ 30 | Quitanda do Zé         | 487 | Banana |  8.00
+ 30 | Quitanda do Zé         | 786 | Carne  | 30.00
+ 30 | Quitanda do Zé         | 647 | Feijão | 10.00
+ 30 | Quitanda do Zé         | 203 | Leite  | 20.00
+ 30 | Quitanda do Zé         | 174 | Pão    |  4.00
+ 30 | Quitanda do Zé         | 508 | Tomate | 13.00
+ 20 | Supermercado Preço Bom | 355 | Arroz  |  5.00
+ 20 | Supermercado Preço Bom | 487 | Banana |  5.00
+ 20 | Supermercado Preço Bom | 786 | Carne  | 30.00
+ 20 | Supermercado Preço Bom | 647 | Feijão |  8.00
+ 20 | Supermercado Preço Bom | 203 | Leite  | 10.00
+ 20 | Supermercado Preço Bom | 174 | Pão    |  3.00
+ 20 | Supermercado Preço Bom | 508 | Tomate |  6.00
+(21 rows)
+---------------------------------------------------------
+      nome      |  nome  | preco 
+----------------+--------+-------
+ Quitanda do Zé | Arroz  |  2.00
+ Quitanda do Zé | Banana |  8.00
+ Quitanda do Zé | Carne  | 30.00
+ Quitanda do Zé | Feijão | 10.00
+ Quitanda do Zé | Leite  | 20.00
+ Quitanda do Zé | Pão    |  4.00
+ Quitanda do Zé | Tomate | 13.00
+(7 rows)
+
+ codigo |       nome       | id |          nome          | quantidade | unidade_medida |  nome  | preco | preco_total 
+--------+------------------+----+------------------------+------------+----------------+--------+-------+-------------
+ X      | Cesta Almoço     | 11 | Mercadinho da Esquina  |        2.0 | Kg             | Arroz  |  7.00 |      14.000
+ X      | Cesta Almoço     | 11 | Mercadinho da Esquina  |        3.0 | Kg             | Carne  | 35.00 |     105.000
+ X      | Cesta Almoço     | 11 | Mercadinho da Esquina  |        2.0 | Kg             | Feijão |  8.00 |      16.000
+ X      | Cesta Almoço     | 11 | Mercadinho da Esquina  |        1.0 | Kg             | Tomate | 10.00 |      10.000
+ X      | Cesta Almoço     | 30 | Quitanda do Zé         |        2.0 | Kg             | Arroz  |  2.00 |       4.000
+ X      | Cesta Almoço     | 30 | Quitanda do Zé         |        3.0 | Kg             | Carne  | 30.00 |      90.000
+ X      | Cesta Almoço     | 30 | Quitanda do Zé         |        2.0 | Kg             | Feijão | 10.00 |      20.000
+ X      | Cesta Almoço     | 30 | Quitanda do Zé         |        1.0 | Kg             | Tomate | 13.00 |      13.000
+ X      | Cesta Almoço     | 20 | Supermercado Preço Bom |        2.0 | Kg             | Arroz  |  5.00 |      10.000
+ X      | Cesta Almoço     | 20 | Supermercado Preço Bom |        3.0 | Kg             | Carne  | 30.00 |      90.000
+ X      | Cesta Almoço     | 20 | Supermercado Preço Bom |        2.0 | Kg             | Feijão |  8.00 |      16.000
+ X      | Cesta Almoço     | 20 | Supermercado Preço Bom |        1.0 | Kg             | Tomate |  6.00 |       6.000
+ Y      | Cesta Café Manhã | 11 | Mercadinho da Esquina  |        2.0 | Kg             | Banana |  5.00 |      10.000
+ Y      | Cesta Café Manhã | 11 | Mercadinho da Esquina  |        5.0 | litros         | Leite  | 12.00 |      60.000
+ Y      | Cesta Café Manhã | 11 | Mercadinho da Esquina  |        5.0 | Kg             | Pão    |  6.00 |      30.000
+ Y      | Cesta Café Manhã | 30 | Quitanda do Zé         |        2.0 | Kg             | Banana |  8.00 |      16.000
+ Y      | Cesta Café Manhã | 30 | Quitanda do Zé         |        5.0 | litros         | Leite  | 20.00 |     100.000
+ Y      | Cesta Café Manhã | 30 | Quitanda do Zé         |        5.0 | Kg             | Pão    |  4.00 |      20.000
+ Y      | Cesta Café Manhã | 20 | Supermercado Preço Bom |        2.0 | Kg             | Banana |  5.00 |      10.000
+ Y      | Cesta Café Manhã | 20 | Supermercado Preço Bom |        5.0 | litros         | Leite  | 10.00 |      50.000
+ Y      | Cesta Café Manhã | 20 | Supermercado Preço Bom |        5.0 | Kg             | Pão    |  3.00 |      15.000
+(21 rows)
+-----------------------------------------------------------------------------------------------------------------------
+
+    nome_cesta    |      nome_mercado      | quantidade | unidade_medida | nome_do_produto | preco_unitario | preco_total 
+------------------+------------------------+------------+----------------+-----------------+----------------+-------------
+ Cesta Almoço     | Supermercado Preço Bom |        2.0 | Kg             | Arroz           |           5.00 |      10.000
+ Cesta Almoço     | Supermercado Preço Bom |        3.0 | Kg             | Carne           |          30.00 |      90.000
+ Cesta Almoço     | Supermercado Preço Bom |        2.0 | Kg             | Feijão          |           8.00 |      16.000
+ Cesta Almoço     | Supermercado Preço Bom |        1.0 | Kg             | Tomate          |           6.00 |       6.000
+ Cesta Café Manhã | Supermercado Preço Bom |        2.0 | Kg             | Banana          |           5.00 |      10.000
+ Cesta Café Manhã | Supermercado Preço Bom |        5.0 | litros         | Leite           |          10.00 |      50.000
+ Cesta Café Manhã | Supermercado Preço Bom |        5.0 | Kg             | Pão             |           3.00 |      15.000
+(7 rows)
+-----------------------------------------------------------------------
+  nome  | menor_preco | maior_preco |     preco_medio     
+--------+-------------+-------------+---------------------
+ Arroz  |        2.00 |        7.00 |  4.6666666666666667
+ Banana |        5.00 |        8.00 |  6.0000000000000000
+ Carne  |       30.00 |       35.00 | 31.6666666666666667
+ Feijão |        8.00 |       10.00 |  8.6666666666666667
+ Leite  |       10.00 |       20.00 | 14.0000000000000000
+ Pão    |        3.00 |        6.00 |  4.3333333333333333
+ Tomate |        6.00 |       13.00 |  9.6666666666666667
+(7 rows)
+
+    nome_cesta    |      nome_mercado      | preco_total 
+------------------+------------------------+-------------
+ Cesta Almoço     | Supermercado Preço Bom |     122.000
+ Cesta Almoço     | Quitanda do Zé         |     127.000
+ Cesta Almoço     | Mercadinho da Esquina  |     145.000
+ Cesta Café Manhã | Supermercado Preço Bom |      75.000
+ Cesta Café Manhã | Mercadinho da Esquina  |     100.000
+ Cesta Café Manhã | Quitanda do Zé         |     136.000
+(6 rows)
+
