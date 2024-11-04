@@ -29,7 +29,7 @@ SELECT nome, unidade_medida, id FROM produto ORDER BY nome ASC;
 -- consulta 9
 SELECT produto_cesta.cesta_codigo AS codigo,
        cesta.nome,
-       produto.quant_minima AS quantidade,
+       produto_cesta.quantidade AS quantidade,
        produto.unidade_medida, 
        produto.nome
 FROM produto_cesta
@@ -82,7 +82,7 @@ ORDER BY produto.nome ASC;
 
 -- consulta 14
 
-sELECT produto_cesta.cesta_codigo AS codigo,
+SELECT produto_cesta.cesta_codigo AS codigo,
        cesta.nome,
        pesquisa.mercado_id AS id,
        mercado.nome,
