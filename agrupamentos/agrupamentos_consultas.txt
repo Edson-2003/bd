@@ -1,0 +1,232 @@
+ id |   forma   |   cor    | tamanho 
+----+-----------+----------+---------
+  1 | círculo   | amarelo  |       3
+  2 | círculo   | amarelo  |       3
+  3 | círculo   | amarelo  |       3
+  4 | círculo   | amarelo  |       3
+  5 | círculo   | amarelo  |       2
+  6 | círculo   | amarelo  |       2
+  7 | círculo   | amarelo  |       2
+  8 | círculo   | azul     |       3
+  9 | círculo   | azul     |       3
+ 10 | círculo   | azul     |       2
+ 11 | círculo   | azul     |       2
+ 12 | círculo   | preto    |       1
+ 13 | círculo   | preto    |       1
+ 14 | círculo   | preto    |       1
+ 15 | círculo   | vermelho |       2
+ 16 | círculo   | vermelho |       2
+ 17 | quadrado  | amarelo  |       3
+ 18 | quadrado  | amarelo  |       3
+ 19 | quadrado  | amarelo  |       3
+ 20 | quadrado  | amarelo  |       2
+ 21 | quadrado  | amarelo  |       2
+ 22 | quadrado  | vermelho |       2
+ 23 | quadrado  | vermelho |       2
+ 24 | quadrado  | vermelho |       2
+ 25 | triângulo | amarelo  |       3
+ 26 | triângulo | azul     |       3
+ 27 | triângulo | preto    |       1
+ 28 | retângulo | vermelho |       7
+(28 rows)
+
+ id |   forma   |   cor   | tamanho 
+----+-----------+---------+---------
+  1 | círculo   | amarelo |       3
+  2 | círculo   | amarelo |       3
+  3 | círculo   | amarelo |       3
+  4 | círculo   | amarelo |       3
+  5 | círculo   | amarelo |       2
+  6 | círculo   | amarelo |       2
+  7 | círculo   | amarelo |       2
+ 17 | quadrado  | amarelo |       3
+ 18 | quadrado  | amarelo |       3
+ 19 | quadrado  | amarelo |       3
+ 20 | quadrado  | amarelo |       2
+ 21 | quadrado  | amarelo |       2
+ 25 | triângulo | amarelo |       3
+(13 rows)
+
+ id |  forma  |   cor   | tamanho 
+----+---------+---------+---------
+  1 | círculo | amarelo |       3
+  2 | círculo | amarelo |       3
+  3 | círculo | amarelo |       3
+  4 | círculo | amarelo |       3
+  5 | círculo | amarelo |       2
+  6 | círculo | amarelo |       2
+  7 | círculo | amarelo |       2
+(7 rows)
+
+ tamanho 
+---------
+       1
+       2
+       3
+       7
+(4 rows)
+
+   forma   
+-----------
+ círculo
+ quadrado
+ retângulo
+ triângulo
+(4 rows)
+
+   forma   | tamanho 
+-----------+---------
+ círculo   |       1
+ círculo   |       2
+ círculo   |       3
+ quadrado  |       2
+ quadrado  |       3
+ retângulo |       7
+ triângulo |       1
+ triângulo |       3
+(8 rows)
+
+   forma   | tamanho | count 
+-----------+---------+-------
+ círculo   |       1 |     3
+ círculo   |       2 |     7
+ círculo   |       3 |     6
+ quadrado  |       2 |     5
+ quadrado  |       3 |     3
+ retângulo |       7 |     1
+ triângulo |       1 |     1
+ triângulo |       3 |     2
+(8 rows)
+
+   forma   | count 
+-----------+-------
+ triângulo |     3
+ retângulo |     1
+ quadrado  |     8
+ círculo   |    16
+(4 rows)
+
+ tamanho | count 
+---------+-------
+       3 |    11
+       2 |    12
+       7 |     1
+       1 |     4
+(4 rows)
+
+ tamanho | count 
+---------+-------
+       2 |    12
+       3 |    11
+       1 |     4
+       7 |     1
+(4 rows)
+
+   forma   | max 
+-----------+-----
+ triângulo |   3
+ retângulo |   7
+ quadrado  |   3
+ círculo   |   3
+(4 rows)
+
+   cor    | min 
+----------+-----
+ vermelho |   2
+ azul     |   2
+ preto    |   1
+ amarelo  |   2
+(4 rows)
+
+   forma   | quantidade | id_maximo | tamanho_min | tamanho_max 
+-----------+------------+-----------+-------------+-------------
+ triângulo |          3 |        27 |           1 |           3
+ retângulo |          1 |        28 |           7 |           7
+ quadrado  |          8 |        24 |           2 |           3
+ círculo   |         16 |        16 |           1 |           3
+(4 rows)
+
+ id |   forma   
+----+-----------
+ 25 | triângulo
+ 26 | triângulo
+ 27 | triângulo
+(3 rows)
+
+   cor    |          avg           | avg  
+----------+------------------------+------
+ vermelho |     2.8333333333333333 | 2.83
+ azul     |     2.6000000000000000 | 2.60
+ preto    | 1.00000000000000000000 | 1.00
+ amarelo  |     2.6153846153846154 | 2.62
+(4 rows)
+
+        avg         |   forma   
+--------------------+-----------
+ 2.3333333333333333 | triângulo
+ 7.0000000000000000 | retângulo
+ 2.3750000000000000 | quadrado
+ 2.1875000000000000 | círculo
+(4 rows)
+
+   cor    |    max    
+----------+-----------
+ vermelho | retângulo
+ azul     | triângulo
+ preto    | triângulo
+ amarelo  | triângulo
+(4 rows)
+
+   forma   
+-----------
+ círculo
+ quadrado
+ retângulo
+ triângulo
+(4 rows)
+
+   cor    
+----------
+ amarelo
+ amarelo
+ amarelo
+ amarelo
+ amarelo
+ amarelo
+ amarelo
+ amarelo
+ amarelo
+ amarelo
+ amarelo
+ amarelo
+ amarelo
+ azul
+ azul
+ azul
+ azul
+ azul
+ preto
+ preto
+ preto
+ preto
+ vermelho
+ vermelho
+ vermelho
+ vermelho
+ vermelho
+ vermelho
+(28 rows)
+
+   cor    | numero_caracteres 
+----------+-------------------
+ amarelo  |                 7
+ azul     |                 4
+ preto    |                 5
+ vermelho |                 8
+(4 rows)
+
+   min   |   max    | min | max |   min   |    max    | min | max 
+---------+----------+-----+-----+---------+-----------+-----+-----
+ amarelo | vermelho |   1 |   7 | círculo | triângulo |   4 |   8
+(1 row)
+
