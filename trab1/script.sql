@@ -22,17 +22,13 @@ DROP TABLE IF EXISTS producer CASCADE;
   comando para consta das tabelas resultantes
 
   consultas possiveis
-
+  select * from mais_ouvidas;
   select * from generos_mais_ouvidos;
-  producer.name AS "Produtora",
-    JOIN producer on producer.id = songs.producer_id
-
-
 */
 
 
 
-/* criação da tabela principal e importação de dados */
+/* criação da tabela inicial e importação de dados */
 CREATE TABLE entrace
 (
   song_id character varying(16) NOT NULL,
@@ -52,28 +48,6 @@ CREATE TABLE entrace
   collaboration character varying(32) NULL
 );
 COPY entrace FROM '/tmp/spotify_songs_dataset.csv' header delimiter ',';
-
-/*
-CREATE TABLE songs
-(
-  song_id character varying(16) NOT NULL,
-  song_title character varying(64) NOT NULL,
-  artist character varying(32) NOT NULL,
-  albun character varying(32) NOT NULL,
-  genre character varying(32) NOT NULL,
-  release_date date NOT NULL,
-  duration character varying (8) NULL,
-  popularity numeric(3) NOT NULL,
-  streams numeric(10) NOT NULL,
-  lenguage character varying(16) NOT NULL,
-  explicit_content character varying(4) NOT NULL,
-  label character varying(32) NOT NULL,
-  composer character varying(32) NOT NULL,
-  producer character varying(32) NOT NULL,
-  collaboration character varying(32) NULL
-);
-*/
-
 
 select * into songs from entrace;
 
@@ -128,6 +102,14 @@ alter table songs add constraint Fk_producer_id FOREIGN KEY (producer_id) refere
 UPDATE songs SET producer_id = producer.id from producer where songs.producer = producer.name;
 
 
+ /*Exclusao de campos nao nescessarios */
+ALTER TABLE songs DROP COLUMN label;
+ALTER TABLE songs DROP COLUMN lenguage;
+ALTER TABLE songs DROP COLUMN albun;
+ALTER TABLE songs DROP COLUMN collaboration;
+ALTER TABLE songs DROP COLUMN genre;
+ALTER TABLE songs DROP COLUMN composer;
+ALTER TABLE songs DROP COLUMN producer;
 
 
 /*views para consulta*/
@@ -157,14 +139,19 @@ CREATE VIEW mais_ouvidas AS
   ORDER BY 8
   LIMIT 10;
 
- /*Exclusao de campos nao nescessarios */
-ALTER TABLE songs DROP COLUMN label;
-ALTER TABLE songs DROP COLUMN lenguage;
-ALTER TABLE songs DROP COLUMN albun;
-ALTER TABLE songs DROP COLUMN collaboration;
-ALTER TABLE songs DROP COLUMN genre;
-ALTER TABLE songs DROP COLUMN composer;
-ALTER TABLE songs DROP COLUMN producer;
- 
 
+
+/*resumo da quantidade de registros*/
+
+select count(*) AS "REGISTROS NA TABELA SONGS" FROM songs;
+select count(*) AS "REGISTROS NA TABELA LABEL" FROM label;
+select count(*) AS "REGISTROS NA TABELA LENGUAGE" FROM lenguage;
+select count(*) AS "REGISTROS NA TABELA ALBUN" FROM albun;
+select count(*) AS "REGISTROS NA TABELA COLLABORATORS" FROM collaborators;
+select count(*) AS "REGISTROS NA TABELA GENRE" FROM genre;
+select count(*) AS "REGISTROS NA TABELA COMPOSER" FROM composer;
+select count(*) AS "REGISTROS NA TABELA PRODUCER" FROM producer;
+
+select * from generos_mais_ouvidos;
+select * from mais_ouvidas;
 
