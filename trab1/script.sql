@@ -154,4 +154,3 @@ select count(*) AS "REGISTROS NA TABELA PRODUCER" FROM producer;
 
 select * from generos_mais_ouvidos;
 select * from mais_ouvidas;
-
